@@ -2,10 +2,8 @@
     margin-top: 12px;
     padding: 24px;
     margin-bottom: 24px;
-    margin-left: 12px;
-    margin-right: 12px;
     background-color: rgb(238, 238, 238);
-    box-shadow: 10px 10px 30px 10px rgb(202, 223, 252) inset;
+    box-shadow: 10px 10px 60px 10px rgb(202, 223, 252) inset;
   
     .repo-heading {
       font-size: 34px;
@@ -20,7 +18,7 @@
       flex-wrap: wrap;
       justify-content: center;
       margin-top: 16px;
-      box-shadow: 1px 1px 30px 1px rgb(202, 223, 252) inset;
+      box-shadow: 1px 1px 60px 1px rgb(202, 223, 252) inset;
   
       .repo-item {
         flex:0 0 auto;
