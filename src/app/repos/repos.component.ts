@@ -19,8 +19,8 @@ export class UserReposComponent implements OnChanges {
 
   repos: GithubRepos[] = [];
   pageNumber: number = 1;
-  itemsPerPage: number = 12;
-  itemsPerPageOptions: number[] = [12, 24, 36, 48, 60];
+  itemsPerPage: number = 15;
+  itemsPerPageOptions: number[] = [15, 20, 30, 40, 50];
 
   isLoading: boolean = false;
 
@@ -30,7 +30,7 @@ export class UserReposComponent implements OnChanges {
     window.open(repourl, '_blank');
   }
 
-  getUserRepos(userName: string, page: number = 1, perPage: number = 20) {
+  getUserRepos(userName: string, page: number = 1, perPage: number = 15) {
     this.isLoading = true;
     this.gitHubService
       .getUserRepos(userName, page, perPage)
