@@ -1,0 +1,51 @@
+<div *ngIf="repos.length > 0 && !isLoading" class="repos-block">
+    <span class="repo-heading">Repositories</span>
+    <div class="repo-cards-container">
+      <div
+        class="repo-card"
+        *ngFor="let repo of repos"
+        (click)="redirectToRepo(repo.html_url)"
+      >
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>{{ repo.name }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Size: {{ repo.size }} KB</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    <div class="pagination">
+      <button
+        class="btn-pagination"
+        type="button"
+        (click)="onPrevious()"
+        [disabled]="pageNumber === 1"
+      >
+        Previous
+      </button>
+      <button
+        class="btn-pagination"
+        type="button"
+        (click)="onNext()"
+        [disabled]="repos.length === 0"
+      >
+        Next
+      </button>
+  
+      <label for="itemsPerPage">Items per page:</label>
+      <select
+        id="itemsPerPage"
+        [(ngModel)]="itemsPerPage"
+        (change)="onItemsPerPageChange($event)"
+      >
+        <option *ngFor="let option of itemsPerPageOptions" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="loader">
+  <app-loading *ngIf="isLoading"></app-loading>
+  </div>

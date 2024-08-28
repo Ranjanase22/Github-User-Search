@@ -1,0 +1,54 @@
+.loader {
+    position: fixed;
+    top: 70%; 
+    left: 50%;
+    right: 50%;
+    width: 60px;
+    height: 60px;
+    
+  }
+
+  .loader-wheel {
+    width: 60px;
+    height: 60px;
+    border: 5px solid ;
+    border: 5px solid #3498db; /* Blue color for the animated part */
+    border-radius: 25%;
+    animation: spin 2s linear infinite;
+  }
+
+  .loader-text {
+    color: rgb(19, 18, 18);
+    font-family: arial, sans-serif;
+    margin-top: 20px;
+  }
+  
+  .loader-text:after {
+    content: "Loading";
+    animation: load 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes load {
+    0% {
+      content: "Loading";
+    }
+    33% {
+      content: "Loading.";
+    }
+    67% {
+      content: "Loading..";
+    }
+    100% {
+      content: "Loading...";
+    }
+  }
+  

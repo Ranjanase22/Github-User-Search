@@ -1,0 +1,137 @@
+.repos-block {
+    margin-top: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    margin-left: 12px;
+    margin-right: 12px;
+    background-color: rgb(238, 238, 238);
+    box-shadow: 10px 10px 30px 10px rgb(202, 223, 252) inset;
+  
+    .repo-heading {
+      font-size: 34px;
+      font-family: serif;
+      margin-bottom: 24px;
+      margin-left: 8px;
+      margin-top: 24px;
+    }
+  
+    .repo-cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 16px;
+      box-shadow: 1px 1px 30px 1px rgb(202, 223, 252) inset;
+  
+      .repo-card {
+        flex:0 0 auto;
+        box-sizing: border-box;
+        margin: 8px;
+        cursor: pointer;
+        width: 300px;
+        
+        .example-card {
+          padding: 16px;
+          box-shadow: 0 8px 16px 16px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          margin-top: 16px;
+          margin-bottom: 16px;
+          height: 150px;
+          max-width: 300px;
+
+          &:hover{
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+          }
+        }
+  
+        .example-card mat-card-header {
+          padding: 8px 16px;
+          background-color: rgb(238, 238, 238);
+          box-shadow: 10px 10px 20px 10px rgb(202, 223, 252) inset;
+        }
+  
+        .example-card mat-card-title {
+          font-weight: bold;
+          font-size: 1.2em;
+        }
+  
+        .example-card mat-card-content {
+          padding: 16px;
+          background-color: #fafafa;
+        }
+      }
+    }
+  
+  
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      gap: 10px;
+    }
+  
+    .btn-pagination {
+      background-color: #3498db;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 0 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background-color: #2980b9; /* Darker shade of blue */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+        transform: translateY(-3px); /* Slight lift effect */
+      }
+    
+      &:active {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Reset shadow on click */
+        transform: translateY(0); /* Reset lift effect */
+      }
+    }
+  
+    .btn-pagination:disabled {
+      background-color: #e9ecef;
+      color: #6c757d;
+      cursor: not-allowed;
+    }
+  
+    .btn-pagination:hover:not(:disabled) {
+      background-color: #3498db;
+    }
+  
+    .page-info {
+      margin: 0 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+  
+    select {
+      margin-left: 10px;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-size: 16px;
+      border: 1px solid #ced4da;
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+      &:focus {
+        border-color: #3498db; 
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); 
+      }
+    
+    }
+  }
+  
+  .loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

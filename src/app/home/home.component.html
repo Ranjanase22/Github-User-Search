@@ -1,0 +1,13 @@
+<div class="header">
+    <div class="heading">
+      <img src="assets/logo.png" class="logo" />
+      <span style="font-weight: bold">Github User Search</span>
+    </div>
+    <div class="search-bar">
+      <app-search (searchEvent)="handleSearch($event)"></app-search>
+    </div>
+    </div>
+    <app-profile *ngIf="!isLoading" [user]="user"></app-profile>
+  <span *ngIf="!!user" class="divider"></span>
+  <app-repos [userName]="searchQuery"></app-repos>
+     
