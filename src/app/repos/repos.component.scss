@@ -15,21 +15,21 @@
       margin-top: 24px;
     }
   
-    .repo-cards-container {
+    .repo-cards-wrapper {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       margin-top: 16px;
       box-shadow: 1px 1px 30px 1px rgb(202, 223, 252) inset;
   
-      .repo-card {
+      .repo-item {
         flex:0 0 auto;
         box-sizing: border-box;
         margin: 8px;
         cursor: pointer;
         width: 300px;
         
-        .example-card {
+        .repo-card {
           padding: 16px;
           box-shadow: 0 8px 16px 16px rgba(0, 0, 0, 0.1);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -44,18 +44,18 @@
           }
         }
   
-        .example-card mat-card-header {
+        .repo-card mat-card-header {
           padding: 8px 16px;
           background-color: rgb(238, 238, 238);
           box-shadow: 10px 10px 20px 10px rgb(202, 223, 252) inset;
         }
   
-        .example-card mat-card-title {
+        .repo-card mat-card-title {
           font-weight: bold;
           font-size: 1.2em;
         }
   
-        .example-card mat-card-content {
+        .repo-card mat-card-content {
           padding: 16px;
           background-color: #fafafa;
         }
@@ -85,14 +85,14 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
       &:hover {
-        background-color: #2980b9; /* Darker shade of blue */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
-        transform: translateY(-3px); /* Slight lift effect */
+        background-color: #2980b9; 
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+        transform: translateY(-3px); 
       }
     
       &:active {
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Reset shadow on click */
-        transform: translateY(0); /* Reset lift effect */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+        transform: translateY(0); 
       }
     }
   
